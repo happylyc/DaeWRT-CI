@@ -185,7 +185,24 @@ jobs:
 
           $GITHUB_WORKSPACE/Scripts/Packages.sh
           $GITHUB_WORKSPACE/Scripts/Handles.sh
-
+      - name: Inject Secrets
+        env:
+          PPPOE_USER: ${{ secrets.PPPOE_USER }}
+          PPPOE_PASS: ${{ secrets.PPPOE_PASS }}
+          DDNS_DOMAIN: ${{ secrets.DDNS_DOMAIN }}
+          DDNS_TOKEN: ${{ secrets.DDNS_TOKEN }}
+        run: |
+          SCRIPT="$GITHUB_WORKSPACE/files/etc/uci-defaults/99-setup"
+          if [ -f "$SCRIPT" ]; then
+            sed -i "s|__PPPOE_USER__|$PPPOE_USER|g" "$SCRIPT"
+            sed -i "s|__PPPOE_PASS__|$PPPOE_PASS|g" "$SCRIPT"
+            sed -i "s|__DDNS_DOMAIN__|$DDNS_DOMAIN|g" "$SCRIPT"
+            sed -i "s|__DDNS_TOKEN__|$DDNS_TOKEN|g" "$SCRIPT"
+            chmod +x "$SCRIPT"
+            echo "Secrets injected successfully"
+          else
+            echo "WARNING: 99-setup script not found"
+          fi
       - name: Custom Settings
         run: |
           . $GITHUB_WORKSPACE/Scripts/function.sh
@@ -258,30 +275,10 @@ jobs:
             make clean -j$(nproc)
           fi
 
-      - name: Release Firmware
-        uses: softprops/action-gh-release@master
+      - name: Upload Firmware Artifact
+        uses: actions/upload-artifact@v4
         with:
-          tag_name: ${{env.CI_NAME}}-${{env.WRT_CONFIG}}_${{env.WRT_DATE}}
-          files: ./wrt/upload/*.*
-          body: |
-            这是个平台固件包，内含多个设备！
-            请注意选择你需要的设备固件！
-            不要问，刷就完事了！
-
-            全系带开源硬件加速，别问了！
-
-            源码：${{env.WRT_REPO}}
-            分支：${{env.WRT_BRANCH}}
-            提交：${{env.WRT_HASH}}
-
-            配置：${{env.WRT_CONFIG}}
-            平台：${{env.WRT_TARGET}}
-
-            登录地址：${{env.WRT_IP}}
-            登录密码：${{env.WRT_PW}}
-
-            WIFI名称：${{env.WRT_SSID}}
-            WIFI密码：${{env.WRT_WORD}}
-
-            内核版本：${{env.WRT_KVER}}
-            插件列表：${{env.WRT_LIST}}
+          name: ${{env.CI_NAME}}-${{env.WRT_CONFIG}}_${{env.WRT_DATE}}
+          path: ./wrt/upload/
+          retention-days: 3
+          compression-level: 0
