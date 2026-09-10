@@ -1,22 +1,33 @@
 #!/bin/sh
 # ============================================================
-# OpenWrt 首次启动自动配置脚本（ddns-go + 端口转发版）
+# OpenWrt 首次启动自动配置脚本（安全占位符注入版）
 # ============================================================
 
 PPPOE_USER='__PPPOE_USER__'
 PPPOE_PASS='__PPPOE_PASS__'
 DDNS_DOMAIN='__DDNS_DOMAIN__'
 DDNS_TOKEN='__DDNS_TOKEN__'
+ROOT_PASS='__ROOT_PASS__'
 
-# 路由器 LAN 地址
-LAN_IP='192.168.10.1'
+# WiFi 密码统一一个
+WIFI_KEY='__WIFI_KEY__'
+
+# SSID（按你提供的三射频）
+WIFI_SSID_2G='__WIFI_SSID_2G__'
+WIFI_SSID_5G1='__WIFI_SSID_5G1__'
+WIFI_SSID_5G2='__WIFI_SSID_5G2__'
 
 # ============================================================
-# 1. 网络配置（PPPoE）
+# 1. 设置 root 密码
+# ============================================================
+echo "[Setup] 设置 root 密码..."
+echo "root:${ROOT_PASS}" | chpasswd
+
+# ============================================================
+# 2. PPPoE 拨号配置（使用正确设备 wan）
 # ============================================================
 echo "[Setup] 配置 PPPoE..."
-uci set network.wan=interface
-uci set network.wan.device='eth0'
+uci set network.wan.device='wan'
 uci set network.wan.proto='pppoe'
 uci set network.wan.username="$PPPOE_USER"
 uci set network.wan.password="$PPPOE_PASS"
@@ -24,80 +35,139 @@ uci set network.wan.ipv6='auto'
 uci commit network
 
 # ============================================================
-# 2. DDNS-Go 配置
+# 3. 写入 ddns-go YAML（Secrets 注入）
 # ============================================================
-echo "[Setup] 配置 ddns-go..."
+echo "[Setup] 写入 ddns-go YAML..."
 
 mkdir -p /etc/ddns-go
 
-cat > /etc/ddns-go/config.yaml << EOF
-ipv4:
-  enable: true
-  gettype: url
-  url: https://myip.ipip.net,https://ddns.oray.com/checkip,https://ip.3322.net,https://4.ipw.cn
-  domains:
-    - $DDNS_DOMAIN
-
-ipv6:
-  enable: false
-
-dns:
-  name: cloudflare
-  id: ""
-  secret: $DDNS_TOKEN
-
-ttl: 300
+cat > /etc/ddns-go/ddns-go-config.yaml <<EOF
+dnsconf:
+  - name: ""
+    ipv4:
+      enable: true
+      gettype: url
+      url: https://ddns.oray.com/checkip, https://ip.3322.net, https://4.ipw.cn, https://v4.yinghualuo.cn/bejson, https://myip.ipip.net
+      netinterface: br-lan
+      cmd: ""
+      domains:
+        - ${DDNS_DOMAIN}
+    ipv6:
+      enable: false
+      gettype: netInterface
+      url: https://speed.neu6.edu.cn/getIP.php, https://v6.ident.me, https://6.ipw.cn, https://v6.yinghualuo.cn/bejson
+      netinterface: br-lan
+      cmd: ""
+      ipv6reg: ""
+      domains: []
+    dns:
+      name: cloudflare
+      id: ""
+      secret: ${DDNS_TOKEN}
+      extparam: ""
+    ttl: ""
+    httpinterface: ""
+user:
+  username: happylyc
+  password: \$2a\$10\$7Ppo5w59nVasaQ.I9rEdWOo8bIoJhIcioZPyz5MHHQ.6Js2LU7NjG
+webhook:
+  webhookurl: ""
+  webhookrequestbody: ""
+  webhookheaders: ""
+notallowwanaccess: true
+lang: en
 EOF
 
-uci set ddns-go.basic=basic
-uci set ddns-go.basic.enabled='1'
-uci set ddns-go.basic.port='9876'
-uci set ddns-go.basic.logoff='1'
-uci set ddns-go.basic.log_stdout='1'
-uci commit ddns-go
+# ============================================================
+# 4. 写入 ddns-go UCI（启用 YAML 模式）
+# ============================================================
+echo "[Setup] 写入 ddns-go UCI..."
+
+cat > /etc/config/ddns-go <<EOF
+config basic 'config'
+  option enabled '1'
+  option logger '1'
+  option port '9876'
+  option delay '0'
+  option dns '223.5.5.5'
+  option noweb '0'
+  option yaml '1'
+  option yamlpath '/etc/ddns-go/ddns-go-config.yaml'
+EOF
 
 # ============================================================
-# 3. 防火墙：端口转发（外网非标准端口 → 路由器）
+# 5. 写入无线配置（严格按你提供的三射频）
 # ============================================================
-echo "[Setup] 配置端口转发..."
+echo "[Setup] 写入无线配置..."
 
-add_redirect() {
-    local name="$1" src_port="$2" dest_ip="$3" dest_port="$4" proto="${5:-tcp}"
-    if ! uci show firewall | grep -q "name='$name'"; then
-        uci add firewall redirect >/dev/null 2>&1
-        uci set firewall.@redirect[-1].name="$name"
-        uci set firewall.@redirect[-1].src='wan'
-        uci set firewall.@redirect[-1].src_dport="$src_port"
-        uci set firewall.@redirect[-1].dest='lan'
-        uci set firewall.@redirect[-1].dest_ip="$dest_ip"
-        uci set firewall.@redirect[-1].dest_port="$dest_port"
-        uci set firewall.@redirect[-1].proto="$proto"
-        uci set firewall.@redirect[-1].target='DNAT'
-        echo "[Setup] 已添加转发: $name (外网:$src_port → $dest_ip:$dest_port)"
-    fi
-}
+cat > /etc/config/wireless <<EOF
+config wifi-device 'radio0'
+	option type 'mac80211'
+	option path 'platform/soc@0/c000000.wifi'
+	option band '5g'
+	option channel '144'
+	option htmode 'HE80'
+	option country 'US'
+	option cell_density '0'
+	option txpower '24'
+	option disabled '1'
 
-# 外网 1008 → 路由器 80 (LuCI)
-add_redirect 'PortForward-LuCI'  '1008'  "$LAN_IP"  '80'   'tcp'
+config wifi-iface 'default_radio0'
+	option device 'radio0'
+	option network 'lan'
+	option mode 'ap'
+	option ssid '${WIFI_SSID_5G2}'
+	option encryption 'psk2+ccmp'
+	option key '${WIFI_KEY}'
+	option disabled '1'
 
-# 外网 2222 → 路由器 22 (SSH)
-add_redirect 'PortForward-SSH'   '2222'  "$LAN_IP"  '22'   'tcp'
+config wifi-device 'radio1'
+	option type 'mac80211'
+	option path 'platform/soc@0/c000000.wifi+1'
+	option band '2g'
+	option channel '11'
+	option htmode 'HE20'
+	option country 'US'
+	option txpower '24'
+	option cell_density '0'
 
-uci commit firewall
+config wifi-iface 'default_radio1'
+	option device 'radio1'
+	option network 'lan'
+	option mode 'ap'
+	option ssid '${WIFI_SSID_2G}'
+	option encryption 'psk2+ccmp'
+	option key '${WIFI_KEY}'
+	option disabled '0'
+
+config wifi-device 'radio2'
+	option type 'mac80211'
+	option path 'soc@0/20000000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0'
+	option band '5g'
+	option channel '44'
+	option htmode 'HE80'
+	option country 'US'
+	option txpower '24'
+	option cell_density '0'
+
+config wifi-iface 'default_radio2'
+	option device 'radio2'
+	option network 'lan'
+	option mode 'ap'
+	option ssid '${WIFI_SSID_5G1}'
+	option encryption 'psk2+ccmp'
+	option key '${WIFI_KEY}'
+	option disabled '0'
+EOF
 
 # ============================================================
-# 4. 重启服务
+# 6. 重启服务
 # ============================================================
-echo "[Setup] 重启网络服务..."
+echo "[Setup] 重启服务..."
 /etc/init.d/network restart
-sleep 3
 /etc/init.d/firewall restart
-
+wifi reload
 /etc/init.d/ddns-go enable
 /etc/init.d/ddns-go restart
-
-echo "[Setup] 配置完成！"
-echo "[Setup] 外网访问: http://$DDNS_DOMAIN:1008 (LuCI)"
-echo "[Setup] SSH 访问: ssh -p 2222 root@$DDNS_DOMAIN"
 
 exit 0
