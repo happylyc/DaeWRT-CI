@@ -203,6 +203,10 @@ jobs:
           else
             echo "WARNING: 99-setup script not found"
           fi
+      - name: Copy custom files
+        run: |
+          mkdir -p ./wrt/files/
+          cp -rf $GITHUB_WORKSPACE/files/* ./wrt/files/
       - name: Custom Settings
         run: |
           . $GITHUB_WORKSPACE/Scripts/function.sh
