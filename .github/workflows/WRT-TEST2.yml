@@ -16,8 +16,12 @@ jobs:
           mkdir -p wrt/files/etc/uci-defaults/
           cp -rf $GITHUB_WORKSPACE/files/* wrt/files/
 
-      - name: Inject Secrets
+          # 添加一个非敏感占位符用于真实验证
+          echo "TEST_VALUE='__TEST_VALUE__'" >> wrt/files/etc/uci-defaults/99-setup
+
+      - name: Inject Secrets + Test Value
         env:
+          TEST_VALUE: "HelloWorld123"   # 非敏感，可见真实值
           PPPOE_USER: ${{ secrets.PPPOE_USER }}
           PPPOE_PASS: ${{ secrets.PPPOE_PASS }}
           DDNS_DOMAIN: ${{ secrets.DDNS_DOMAIN }}
@@ -30,20 +34,17 @@ jobs:
         run: |
           SCRIPT="wrt/files/etc/uci-defaults/99-setup"
 
-          if [ -f "$SCRIPT" ]; then
-            sed -i "s|__PPPOE_USER__|$PPPOE_USER|g" "$SCRIPT"
-            sed -i "s|__PPPOE_PASS__|$PPPOE_PASS|g" "$SCRIPT"
-            sed -i "s|__DDNS_DOMAIN__|$DDNS_DOMAIN|g" "$SCRIPT"
-            sed -i "s|__DDNS_TOKEN__|$DDNS_TOKEN|g" "$SCRIPT"
-            sed -i "s|__ROOT_PASS__|$ROOT_PASS|g" "$SCRIPT"
-            sed -i "s|__WIFI_KEY__|$WIFI_KEY|g" "$SCRIPT"
-            sed -i "s|__WIFI_SSID_2G__|$WIFI_SSID_2G|g" "$SCRIPT"
-            sed -i "s|__WIFI_SSID_5G1__|$WIFI_SSID_5G1|g" "$SCRIPT"
-            sed -i "s|__WIFI_SSID_5G2__|$WIFI_SSID_5G2|g" "$SCRIPT"
-          else
-            echo "ERROR: 99-setup not found"
-            exit 1
-          fi
+          sed -i "s|__TEST_VALUE__|$TEST_VALUE|g" "$SCRIPT"
+
+          sed -i "s|__PPPOE_USER__|$PPPOE_USER|g" "$SCRIPT"
+          sed -i "s|__PPPOE_PASS__|$PPPOE_PASS|g" "$SCRIPT"
+          sed -i "s|__DDNS_DOMAIN__|$DDNS_DOMAIN|g" "$SCRIPT"
+          sed -i "s|__DDNS_TOKEN__|$DDNS_TOKEN|g" "$SCRIPT"
+          sed -i "s|__ROOT_PASS__|$ROOT_PASS|g" "$SCRIPT"
+          sed -i "s|__WIFI_KEY__|$WIFI_KEY|g" "$SCRIPT"
+          sed -i "s|__WIFI_SSID_2G__|$WIFI_SSID_2G|g" "$SCRIPT"
+          sed -i "s|__WIFI_SSID_5G1__|$WIFI_SSID_5G1|g" "$SCRIPT"
+          sed -i "s|__WIFI_SSID_5G2__|$WIFI_SSID_5G2|g" "$SCRIPT"
 
       - name: Verify injected values
         run: |
