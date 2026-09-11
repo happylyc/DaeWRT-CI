@@ -1,13 +1,3 @@
-**Prettier v3.9.6**
-[Playground link](https://prettier.io/playground/?utm_source=copilot.com#N4Igxg9gdgLgprEAuEBiQiXKDR-Qi9GBtFQFK6AcFoMP6AOlFAIYC2cSABAOoBKAKgLQDCA8swKLly0JOXr0A7hABOAawBmAGwjiA+mEoKFIqGLEBLKAAcArjADO23bpasVPAHIAxAJIBxS1d1S4AR2N7vABMGGCljOFFPMRgAT0M6ejNQgwBzSKsbFVYACT4AWT4PKO8-ALhg+lDw9M9Y+IYkqVSasUz7AEECos8S-yCQsIidKMq4hMbm4Yy2FQBlWecAEW6rXrKKqqGR0frE5Kg0qesZxl5llq9fPvKB6qOrOvH9w6jM5wAFFcvS-srBi+iYwazwumXejC+YjWv02AJ2TyaB1BM34724kPo0Jufzu20ewMRL08mQAQsx2vZONkMViNv97rp8XtCcjbLNuABVZicQpw2kMOQaMxbEZMiZIhlg9qcADS7VcvIZUKu6wFQpFUTFIMlM1YfFmrBpKt+goUwrhWpZDI5sz4KgAis4bc48tx7LMVIt2na8u0ZXwXAAZRXbfn0U3mpX0QJwQXGBQwNVmjW1IH0ABGEAgCjglCgF04zhUHS6fON2IjKYeafFROmtna3OpZZ+FfVFpr2oQADcPK5nDkOSSstx-fYGAASYDAYVgbzmAB0-cHw9Yo749gAvpvIpkHC53PQp8ADCZF3u3Qft7vdbkukfp6fTGYF5kcvk+Nfhm1OoUHyejGfV8ZhLT8d2-GZ5iWSdH0A89IIWRYv1aE4zhggCzxfTJTmYJDwJQ2wPnQp94MI95kKYGZwWIuCsKoxgKMyVF0X-Ei6NsZjGJmMkKSpGjMOA2weMpbIuNsd5pTlBV+KAqVZXlMCb1sPUDRk0isn1VgKJtO1HWdV13U9b0VF9f0gz-Y82IXHSHSdBYDI9L0fT9ANnGDMTPWcZgGAAcnEKQYB8yJC2LX81JfELQI8xs+NY2jBJUGLRPA8gACsIHTCxIkgbxuioWhwoS9kuR5CioWMKAzHYYR6GMdMKpgYx2AUSh4CSGokjgQwsoZdh6HyhJnEqmANAUegSU4OEewxMRFj4ElnApFRHGYN09XsZZ+ugAx4CkSgwBgPRuyrLwKoYAAfOExDMYxAggeh2D4ehKEMGAHpiHwfHoAwklGjMwEEXr+poBJHG8OB6EWPQzBkehZkMfaTrEYxhQsegEBjKQzGgWgoDgAAvOAzAAejkcH2ECaGZHYMwEbAOAAAFuwAJjhcQ9BgAALGbMTgagIGOlQ80CKQID0OlcW2Xn+cFu6YDxxMcSRy4ZbgFROcoGG4E0W5leVVWVBgLMFDUfbOYSWEo31gW1bMcQXt1q7pZtlQ6ZkSgUiJhhSBASh8eMbx2DABQ9HoFIsxSHMg6UW7o9D6g9DnCBsbkGB2HKT2aZG9MczDiOo7ATnRdoLPKBziG5DKOQIAAD3oQxk5gFJvDMHwFAAKkqPmA4MdhO-bzRu2oTvqBiVuO+jCB5bgNOzECan259p3vANt2PaJlRoDVyBqGoYXHat53BerhRMbRn3iZRqRibMDXvBv9nU-oS+zGv2-KHvhOoET6BAkoZ+r43zvnAYmftO4vzfsA4mkdKAxnAYApQ6gFBAI-iAwuxc9DGGoAA1+xNEEaBQffBu4g4BY3NpoJeh82qHQOEmSMFw+oDQYJwc2YAZAQFMPQd4otUpwAOmYOEKMvbPQOnoaAJNC58PYaYBme8DAMOBgVegQ0OZ6A0HofGrUxE6D4FAbsAQcYIBgFNPRPM5oLSWitNaG5NpQG2rAUh+1DrHT5Gdegl1D43Tug9J6L03rsA+l9EwUhPbhirrXJ2Xj7qPWeq9d6n1aqGD-vASJt1om+LiQEhJch4wKHYMYQwzdYF60SGknxsT-GBOeqYaQfMbYPXYMEz2qTvExL8fEr6lAanB1zPmTxZS2mZKqT0vMLT0kVI6d9Yaf07pmGZhVPQdcQ7phycKCmcBuxO1mfM7+dcfYTmXNkIcKgcIylmBJHkxNZhzj0K9EmBgOYqHqnoU+KgewGKgLjGAC5b6UKlqU7x6ZNac3oPsw5xzTnnOlHwK5Ny7nEweTAJ5-hXnvNFp8oxPzOZ-KllE8pZgx7wGoAdMaf86lQHYN4JQsCxnlMOrQZJfCYBjWFGnelBMt6gpAO0MwairkawOBrPQOLth6DkPQHee8oCBAet2PO9AAB8xMYzdmJlAXJ9BmYKoAGQAEYADclRzZ9P+WIPhnN7o+1cNwFQzh3SsHaIGYMiwAC8sIQCKoVVyg5A4jnDg3AANRFSMbWkZTXo0LpakA1rbX2sdc6l1lYfaeu9eC-19gg0gCdpXcgqB-l4sjeIHQE4dLeQOatDk7xZhHjTSc3gZyLkCCgHm3FZTqAyEplIB6hhn7UFgMTZ5rz-LGObfmsphbi2lqQCW20zBe39sHYEFQw7c1ju8QoHQNN50wAHSipdw6a2+ohfWqFlyV0ms8IwkGDBZgzwKfQVwEA4RioYD2JcNq7UGnjXwRY9AACELr6A+U2EFKMQi0ZOO0STVlBT2DhyZgANjZhzbmTtw7sGOljbRvldULmZgh0DUQ+phCgAwcO9BMO8ugIDIjijBrf0OuozRh1oD0ADRocIAiowkYuk7c1UbMhej1C6icAAKVgAAtF1HJWCcHYAADmjK1CGABqH2ABSGIC51PUG04Edg6nsjabyNp2YPsACUyaFVep9SuFQga+ORq5ZkX0zAZQieALW5iCw1zMAAJrqfU8TduO4PXWcPXZhzh9+POZmHaxw3APOZGKtyPggXguhZTbZv19mM2OYtbF5SjYFSsBE6J5uXUHrYN1Q9CA7wgMAD19xuCyMVvgthSCkBlAAbU6+IAAuip0TAB+F1nWXUxHMz5egC5iacGgJXFIxMJwXicG4BcMAa4wEs2Fmztaov-Jiz7TIMoA18GYC6uxeMrN7aPemoN0WnPHZmIGZwBpLtbxuxFnLUX8sCZmIWETe5nBfey8cg7UtuvdYevjI8mQkr0H6-1+g2rtX0GAE7M1NcG4BUog2JsZXhQyvYDoHyJMFzt09HwANzgeQqE66JinnXzNU5p3TinxNOu6uJoYabYPhyQsbXNhbeglsrYB5edbm23rnXoObWBD0dC6ss4fM1T2QDw4J+L-HVJQf7by4ffCUsjsgG1yoZiy3STkhElZ1Nd261udPTC7wDcVCKA9sGsQV6lGcCUHjeg82YyuNI+4tDHMJV+4huwdZr1OYupq9H3lBwo7pj2lAQuDTU95gz2b4SVI4coj4GiGbxNh2c4vdsMAMrZtl5R2jk3mRsjtFmNkMrKRw9KBSA9BPjT5yxETdIPeiYfLqc5j5HbWX9cPYUUwgPrDYbXKaHc4PvHD6V2lSXqrlAa4xlj-QAAzA9R44YHplE9nskATPSCiel5186vzSDmYnMm9ONc+GTzmQsuuwBNygtIIa1-d-QufmGVFTb-X-TrfVGjS9OjZhM2CGRYLqDGBAMAPQImQRVGBgSDcRYmdQSRJmAAFmQy5h5gRhIND1VxLzLwXDADwPNkxyoIChvhGnbwOBUE7SdhkDgBiHQnRj0QSgR23HYGPDl2BUcBeSJlEx8nbnbmJhdwgDdxahSHH3oCEJELfUE3aD1FUKN1DCJiNkDi4LHlX3DXUP4M13zzUOnFENvnEJzDMCkJkLkK6gUPd2UPMx0PYAYLMO7AEKbE8OgKsG9wSGYFjBbhBS5ghjoOVh4woP+TFXoGhwpi5RryYN+lYJSHYICGTX60NUiIrylnXxlR9lSJ3XSNSCyKkBf2P2JwGi5V+moEMBfzsX8TIJBR9nbhGhCRnkXg9Vl3EE5gkN5gV0pWjACENTugYKsCKO9Q4I9XYGP3FUALAEqA4Qzx-3oDU0oLumuzX1DlNUBkCN0GCIYA5CSWU3oEcDgHKC41DDcQ8X+Sr0YJ3SOKiFmzMDhXMFJmuMCDMESUZQekoCdneM+JJjkB+L+J+hGk0EBNeIelgIDxRiNmwXeH2ndk9luJGFiIeKlieNKJ5zRPXnLydn5wdwbWhVhSXy+NRLYXXhfF+UPlJMFwpMX1uS+OyGFnsKxThKsEOMPhn2vQDwgEMBiAlSRIgGwUrnsJXziKlnbU7W7WeNJgkJJidjAB7UpXFSZJPSFylKJmCyVL1NVKBlnyGl4QOjhj4XnExKiGmidneAdO4DtCnX-ESCtJnhfAdLRGdNnR0PtMdLtAknmF4NnGtIXC9KdJUCDOrTKhGEWEWEMkWG4F9DtRDPdMXHjMTOTPaDtT9MPkzI9DXDHDTLnA9IXALJHDHDzP+VWm4HEmb1mBLLDNrPrPmDzKdkYGcBcBUH9D8ybLLM7O7N7OrKlkHKLCgkWBUGZkPBENDIHK7PHMQinNcBHO2DHLmCXIAFZXBdV+zzwFyNylgVBtyatYzXgDyJzjzXBmY9ysILytzrz2zuN7inZZhOBmAPhSsfZhSEAy8jTiYZ4wBL5UD1k4wEwSYABOCCmmO9JorNQ+BIpI8VfZN8j894VgHIvI41BgonU-eo86FQKMgMlQUtQi86CcCMn087c6NID1FC98z8z3EYXC9gUOH2MwAioi70qMhssiii4i6Mmi5NeitCjC+CnC8oPC9iziispMlM+wPi2S7Mu1ISui03VCxi+C8NFitikADiwiisosjcRShMws9cewVS71DS9CyhCS4nXS-S83bgOsni+YPils1y2YSykSzSnkzwHS-Cwi9c3svi4KvgPzby9Shimy8SyggK6SoK+8o86c0KpKyc6cyKicaysSuyqSvSzi9cy8k81K7soqnczK7KpiqIeK-KxK0qh85mEqxco87c5mCq6KnKgoyvTmEAzYi-LKjqqqzwE3W9Us8wKZc0+AGVG6WgomMwHJTQGIIas1ZMBghvRsewO1Q8KCmCxqHtD4qkraN6auCqQIZasJOEk4xEpICUy0mAGhFIG0noF8w+Bcb7Y9R3IXVk+FHJdPFjKAbkw+PE0vJgp2NDBARxeANQEXLvVHCVVqGbSAKARbMGxk2tZky5b6r429e61Iek7FLqzwPeLg6MWMJGxbB6VKMTIwUWMADwuG4mqInMPMSm6mwwWmlXAUpRRYZQKAalGVGk9E9AqMF9Pg3wt8TSf9QDYDQYQjLEl6x46vEGl4wmqwRmyeItfm1m0TGmiAOmy6hE+bRooY8QqQage2bwZ9OQV9cw3USWgDIDEDGUnEyvJWsvPysQdW9gKmnW9mvWjw86WXL21KGrANF1LjLmhIRAnMeAegbgU+APeA52p2PNQAduDAA15UAGR-QADW1AB0JUAAsIwANz1AACJUABM0tDEFaI+gEOJIBpIw10jQmYQQzcYQ6wjWWwlUxw2Q+QxQj2FQoQhpVKbGHQeu6PVKL6HyBcbrZHWXBcIw6bfowY3ObwEYrtIwiYp9SglISu+A0mmOiGfZIw86nYkpPNQAZPjAAvxRzsADanQAQAM-suUXUn7n6n6q7fpGozAX6X7zqTdaD4DJxRNAhjAHpb4lSaCq7ZcwBOF2BxVlcf71dyjaEjxAHgGaYQV8TEHMiFTIHoHYGdsDbZ88gzYDAIYhpq4zatFqNnyQ8XaRhgb3bVbdATcv6WHWGv7zqzR1TgHZcKsNSnofYBpzp5tvBzpWAi5cwzqtLjd1c2HZGWHj6liCbDsZG5HVGxspHtggGHoQVo894a4Y8uZ48H6fY1HVHbKTTBTBb15LiAhzbUFk6ga3amC696B5SAgS8Cl+biSgaNTxVZsaCYaPHDAvH5tkbRcvDTdVsDwfYImzd4tuAYn9krdeJshEnImZghMBBL9b9GH9BxUocC9lJ7bpaQNEdcijUEA1r1cTszsLsxMZjZt0wDBiYujPYvij8xgT8ScQYuV24FwpUxV9CX84A38VjeHat6sfIGsuCpA8Yxo+pOsetOszrSAFxBtpsNjICJ9wtSSIdlGCtntbBXt3t6mDAlammoAWmP42mSYOn4gum6iOj+m8xBn2p5iRn39xnqpJmGsFBjAQLRMXpDBzpIjaBzNusGtEd24NmID-93E-ggNOsoBpsUXtnbtIsDcGCGmB1mnWmPTiZT9vBz8UjF5r9F0DBq478h7qNSB78NZmZNyEMbpqABFaW14MTmdn93nRnMRsFNT0df8tisXpBLi3InoDBkHsWLmrnuj2mFjOmliDAemOizcHVmASteiPCN6pj6A+AAANUrMTIFYUOoiccyeFqB-xGVSe6bGBzVdgFXcNMQUCMrY1hAHps1sVi16B61hcW12B+Fr5sRLlBnVVtrDCx-JnEAR1p1+wPgRgZaMV9RicUCNJs3TJko-ZfVzqp11xuVO1z14MIJrxlN+NxN4MBgk+j23QKV3F65-Fu5iuB6D5lY6gfN8VDY2bTxiAWBAlyA6tz2ygEmkZTdH23W-WvYghwUs4rW02ux7wegdoAKMVJxDA4RbAyqS+YJnt-TD+Q6QUA6Qg4g1DQ+WfY8N9SKX8Kw4ARu2wZrVwbcFQc9222wTJs8zwNohgfE7t3t5eGeIxbRCmSgYwg-NUiU9muawDnMY6LQegAABhAAABoQBhT-qzBkBQAP5RZxBUTvBKpkBfYFB7Yx4kOQAs82EZ5ZgQZAwSHkBKxkOMpJrGA9pDACOIPhQpBjpSPyOuCYB4Z9pUhkBNhkPhQE4hPBhkORn4gmgvkNBuBpPWppB3hk5VFoACOMZSOpPSE9BZOFBWBSEqAmgiY6P1QRPUgcx7RjAp44ATPkxkOh6a5ZhzO4BLPrPbPhRkO-BrPuFhT0OUBNYScfjyhSPQhKAXlUgja94CPRpSOk9I44B2h7qmh6p4B3hSEaO8Z3O4BkPOYYBqAFBGBBi2o6Y4Bb1KpVF9FYgCOwAzB0PkPuxwghoYxYAsb2hpVZhYgcwsvkO-bhRmOXo2OW5SEuPJPpVuA5AMubOUAFA5BSOfpSEYBuEPYoukB6OQAEYsZSECOYgaAFBSP2adpGBxYuZkB5M4PkOsQluUgVu1vs4jvAgTukBmZkOhFWAy4-O1u+Z0xygYxAhAw8wUhjB15HBB9WoHrouakQBtwgA)
-<!-- prettier-ignore -->
-```sh
---parser yaml
-```
-
-**Input:**
-<!-- prettier-ignore -->
-```yaml
 #云编译公用核心
 name: WRT-CORE
 
@@ -196,50 +186,6 @@ jobs:
           $GITHUB_WORKSPACE/Scripts/Packages.sh
           $GITHUB_WORKSPACE/Scripts/Handles.sh
 
-          
-
-
-          
-      - name: Copy custom files
-        run: |
-          mkdir -p ./wrt/files/
-          cp -rf $GITHUB_WORKSPACE/files/* ./wrt/files/
-      - name: Inject Secrets
-        env:
-          PPPOE_USER: ${{ secrets.PPPOE_USER }}
-          PPPOE_PASS: ${{ secrets.PPPOE_PASS }}
-          DDNS_DOMAIN: ${{ secrets.DDNS_DOMAIN }}
-          DDNS_TOKEN: ${{ secrets.DDNS_TOKEN }}
-          ROOT_PASS: ${{ secrets.ROOT_PASS }}
-
-          WIFI_KEY: ${{ secrets.WIFI_KEY }}
-          WIFI_SSID_2G: ${{ secrets.WIFI_SSID_2G }}
-          WIFI_SSID_5G1: ${{ secrets.WIFI_SSID_5G1 }}
-          WIFI_SSID_5G2: ${{ secrets.WIFI_SSID_5G2 }}
-
-        run: |
-          SCRIPT="openwrt/files/etc/uci-defaults/99-setup"
-          if [ -f "$SCRIPT" ]; then
-            sed -i "s|__PPPOE_USER__|$PPPOE_USER|g" "$SCRIPT"
-            sed -i "s|__PPPOE_PASS__|$PPPOE_PASS|g" "$SCRIPT"
-
-            sed -i "s|__DDNS_DOMAIN__|$DDNS_DOMAIN|g" "$SCRIPT"
-            sed -i "s|__DDNS_TOKEN__|$DDNS_TOKEN|g" "$SCRIPT"
-
-            sed -i "s|__ROOT_PASS__|$ROOT_PASS|g" "$SCRIPT"
-
-            sed -i "s|__WIFI_KEY__|$WIFI_KEY|g" "$SCRIPT"
-
-            sed -i "s|__WIFI_SSID_2G__|$WIFI_SSID_2G|g" "$SCRIPT"
-            sed -i "s|__WIFI_SSID_5G1__|$WIFI_SSID_5G1|g" "$SCRIPT"
-            sed -i "s|__WIFI_SSID_5G2__|$WIFI_SSID_5G2|g" "$SCRIPT"
-
-            chmod +x "$SCRIPT"
-            echo "Secrets injected successfully"
-          else
-            echo "WARNING: 99-setup script not found"
-          fi
-
       - name: Custom Settings
         run: |
           . $GITHUB_WORKSPACE/Scripts/function.sh
@@ -312,322 +258,30 @@ jobs:
             make clean -j$(nproc)
           fi
 
-      - name: Upload Firmware Artifact
-        uses: actions/upload-artifact@v4
+      - name: Release Firmware
+        uses: softprops/action-gh-release@master
         with:
-          name: ${{env.CI_NAME}}-${{env.WRT_CONFIG}}_${{env.WRT_DATE}}
-          path: ./wrt/upload/
-          retention-days: 3
-          compression-level: 0
-```
+          tag_name: ${{env.CI_NAME}}-${{env.WRT_CONFIG}}_${{env.WRT_DATE}}
+          files: ./wrt/upload/*.*
+          body: |
+            这是个平台固件包，内含多个设备！
+            请注意选择你需要的设备固件！
+            不要问，刷就完事了！
 
-**Output:**
-<!-- prettier-ignore -->
-```yaml
-#云编译公用核心
-name: WRT-CORE
+            全系带开源硬件加速，别问了！
 
-on:
-  workflow_call:
-    inputs:
-      WRT_CONFIG:
-        required: true
-        type: string
-      WRT_THEME:
-        required: true
-        type: string
-      WRT_NAME:
-        required: true
-        type: string
-      WRT_SSID:
-        required: true
-        type: string
-      WRT_WORD:
-        required: true
-        type: string
-      WRT_IP:
-        required: true
-        type: string
-      WRT_PW:
-        required: true
-        type: string
-      WRT_REPO:
-        required: true
-        type: string
-      WRT_BRANCH:
-        required: true
-        type: string
-      WRT_SOURCE:
-        required: false
-        type: string
-      WRT_PACKAGE:
-        required: false
-        type: string
-      WRT_TEST:
-        required: false
-        type: string
-      USE_QIUSIMONS_DAE_MAKEFILE:
-        required: false
-        default: false
-        type: boolean
-      CI_NAME:
-        required: false
-        type: string
-      WRT_ARCH:
-        required: false
-        type: string
-env:
-  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-  WRT_CONFIG: ${{inputs.WRT_CONFIG}}
-  WRT_THEME: ${{inputs.WRT_THEME}}
-  WRT_NAME: ${{inputs.WRT_NAME}}
-  WRT_SSID: ${{inputs.WRT_SSID}}
-  WRT_WORD: ${{inputs.WRT_WORD}}
-  WRT_IP: ${{inputs.WRT_IP}}
-  WRT_PW: ${{inputs.WRT_PW}}
-  WRT_REPO: ${{inputs.WRT_REPO}}
-  WRT_BRANCH: ${{inputs.WRT_BRANCH}}
-  WRT_PACKAGE: ${{inputs.WRT_PACKAGE}}
-  WRT_TEST: ${{inputs.WRT_TEST}}
-  USE_QIUSIMONS_DAE_MAKEFILE: ${{inputs.USE_QIUSIMONS_DAE_MAKEFILE}}
-  WRT_DIR: "wrt"
-  CI_NAME: ${{inputs.CI_NAME}}
-  WRT_ARCH: ${{inputs.WRT_ARCH}}
+            源码：${{env.WRT_REPO}}
+            分支：${{env.WRT_BRANCH}}
+            提交：${{env.WRT_HASH}}
 
-jobs:
-  core:
-    name: ${{inputs.WRT_SOURCE}}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install BC
-        env:
-          DEBIAN_FRONTEND: noninteractive
-        run: |
-          sudo -E apt -yqq install bc
+            配置：${{env.WRT_CONFIG}}
+            平台：${{env.WRT_TARGET}}
 
-      - name: Free Disk Space
-        uses: endersonmenezes/free-disk-space@v2
-        with:
-          remove_android: true
-          remove_dotnet: true
-          remove_haskell: true
-          remove_tool_cache: true
-          remove_swap: true
-          remove_packages: "azure-cli google-cloud-cli microsoft-edge-stable google-chrome-stable firefox postgresql* temurin-* *llvm* mysql* dotnet-sdk-*"
-          remove_packages_one_command: true
-          remove_folders: "/usr/share/swift /usr/share/miniconda /usr/share/az* /usr/share/glade* /usr/local/share/chromium /usr/local/share/powershell"
-          testing: false
+            登录地址：${{env.WRT_IP}}
+            登录密码：${{env.WRT_PW}}
 
-      - name: Checkout Projects
-        uses: actions/checkout@main
-      - name: Initialization Environment
-        env:
-          DEBIAN_FRONTEND: noninteractive
-        run: |
-          sudo -E apt -yqq purge firefox
-          sudo -E apt -yqq update
-          sudo -E apt -yqq full-upgrade
-          sudo -E apt -yqq autoremove --purge
-          sudo -E apt -yqq autoclean
-          sudo -E apt -yqq clean
-          sudo -E apt -yqq install dos2unix libfuse-dev
-          dos2unix "$GITHUB_WORKSPACE/Scripts/init_build_environment.sh"
-          sudo bash "$GITHUB_WORKSPACE/Scripts/init_build_environment.sh"
-          sudo -E systemctl daemon-reload
-          sudo -E timedatectl set-timezone "Asia/Shanghai"
-          if command -v go >/dev/null 2>&1; then
-            echo "GO_INSTALLED=true" >> "$GITHUB_ENV"
-          else
-            echo "GO_INSTALLED=false" >> "$GITHUB_ENV"
-          fi
-      #          sudo chown $USER:$GROUPS $GITHUB_WORKSPACE
-      #          sudo mkdir -p /mnt/build_wrt
-      #          sudo chown $USER:$USER /mnt/build_wrt
-      #          sudo ln -s /mnt/build_wrt $GITHUB_WORKSPACE/wrt
+            WIFI名称：${{env.WRT_SSID}}
+            WIFI密码：${{env.WRT_WORD}}
 
-      - name: Setup Go
-        if: env.GO_INSTALLED != 'true'
-        uses: actions/setup-go@v6
-        with:
-          go-version: "1.26"
-      - run: go version
-
-      - name: Initialization Values
-        run: |
-          echo "WRT_DATE=$(TZ=UTC-8 date +"%y.%m.%d-%H.%M.%S")" >> $GITHUB_ENV
-          echo "WRT_MARK=${GITHUB_REPOSITORY%%/*}" >> $GITHUB_ENV
-          echo "WRT_INFO=${WRT_SOURCE%%/*}" >> $GITHUB_ENV
-          echo "WRT_TARGET=$(grep -m 1 -oP '^CONFIG_TARGET_\K[\w]+(?=\=y)' ./Config/$WRT_CONFIG.txt)" >> $GITHUB_ENV
-          echo "WRT_KVER=none" >> $GITHUB_ENV
-          echo "WRT_LIST=none" >> $GITHUB_ENV
-
-          echo "WRT_CI=$WRT_CI" >> $GITHUB_ENV
-          [[ -z $WRT_ARCH ]] && {
-            export WRT_ARCH=$(sed -n 's/.*_DEVICE_\(.*\)_DEVICE_.*/\1/p' $GITHUB_WORKSPACE/Config/$WRT_CONFIG.txt | head -n 1)
-            echo "WRT_ARCH=$WRT_ARCH" >> $GITHUB_ENV
-          }
-          echo "$WRT_REPO/$WRT_BRANCH" > "$GITHUB_WORKSPACE/repo_flag"
-      - name: Clone Code
-        run: |
-          git clone --depth=1 --single-branch --branch $WRT_BRANCH $WRT_REPO ./wrt/
-
-          cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
-
-      - name: Check Scripts
-        run: |
-          find ./ -maxdepth 3 -type f -iregex ".*\(txt\|sh\)$" -exec dos2unix {} \; -exec chmod +x {} \;
-
-      - name: Cache Dependencies
-        uses: actions/cache@v4
-        with:
-          path: |
-            ./wrt/.ccache
-            ./wrt/staging_dir
-          key: ${{ env.WRT_ARCH }}-${{ hashFiles('**/repo_flag') }}-${{ env.WRT_DATE }}
-          restore-keys: |
-            ${{ env.WRT_ARCH }}-${{ hashFiles('**/repo_flag') }}-
-            ${{ env.WRT_ARCH }}-
-
-      - name: Refresh the cache
-        run: |
-          if [ -d "./wrt/staging_dir" ]; then
-            find "./wrt/staging_dir" -type d -name "stamp" -not -path "*target*" | while read -r dir; do
-                find "$dir" -type f -exec touch {} +
-            done
-          fi
-
-      - name: Update Feeds
-        run: |
-          cd ./wrt/
-
-          ./scripts/feeds update -a
-          ./scripts/feeds install -a
-
-      - name: Custom Packages
-        run: |
-          cd ./wrt/package/
-
-          $GITHUB_WORKSPACE/Scripts/Packages.sh
-          $GITHUB_WORKSPACE/Scripts/Handles.sh
-
-      - name: Copy custom files
-        run: |
-          mkdir -p ./wrt/files/
-          cp -rf $GITHUB_WORKSPACE/files/* ./wrt/files/
-      - name: Inject Secrets
-        env:
-          PPPOE_USER: ${{ secrets.PPPOE_USER }}
-          PPPOE_PASS: ${{ secrets.PPPOE_PASS }}
-          DDNS_DOMAIN: ${{ secrets.DDNS_DOMAIN }}
-          DDNS_TOKEN: ${{ secrets.DDNS_TOKEN }}
-          ROOT_PASS: ${{ secrets.ROOT_PASS }}
-
-          WIFI_KEY: ${{ secrets.WIFI_KEY }}
-          WIFI_SSID_2G: ${{ secrets.WIFI_SSID_2G }}
-          WIFI_SSID_5G1: ${{ secrets.WIFI_SSID_5G1 }}
-          WIFI_SSID_5G2: ${{ secrets.WIFI_SSID_5G2 }}
-
-        run: |
-          SCRIPT="openwrt/files/etc/uci-defaults/99-setup"
-          if [ -f "$SCRIPT" ]; then
-            sed -i "s|__PPPOE_USER__|$PPPOE_USER|g" "$SCRIPT"
-            sed -i "s|__PPPOE_PASS__|$PPPOE_PASS|g" "$SCRIPT"
-
-            sed -i "s|__DDNS_DOMAIN__|$DDNS_DOMAIN|g" "$SCRIPT"
-            sed -i "s|__DDNS_TOKEN__|$DDNS_TOKEN|g" "$SCRIPT"
-
-            sed -i "s|__ROOT_PASS__|$ROOT_PASS|g" "$SCRIPT"
-
-            sed -i "s|__WIFI_KEY__|$WIFI_KEY|g" "$SCRIPT"
-
-            sed -i "s|__WIFI_SSID_2G__|$WIFI_SSID_2G|g" "$SCRIPT"
-            sed -i "s|__WIFI_SSID_5G1__|$WIFI_SSID_5G1|g" "$SCRIPT"
-            sed -i "s|__WIFI_SSID_5G2__|$WIFI_SSID_5G2|g" "$SCRIPT"
-
-            chmod +x "$SCRIPT"
-            echo "Secrets injected successfully"
-          else
-            echo "WARNING: 99-setup script not found"
-          fi
-
-      - name: Custom Settings
-        run: |
-          . $GITHUB_WORKSPACE/Scripts/function.sh
-          cd ./wrt/
-
-          generate_config && cat .config
-
-          $GITHUB_WORKSPACE/Scripts/Settings.sh
-
-          make defconfig -j$(nproc) && make clean -j$(nproc)
-
-      - name: Download Packages
-        if: env.WRT_TEST != 'true'
-        run: |
-          cd ./wrt/
-
-          make download -j$(nproc)
-
-      - name: Compile Firmware
-        if: env.WRT_TEST != 'true'
-        run: |
-          cd ./wrt/
-
-          make -j$(nproc) || make -j1 V=s
-
-      - name: Delete Old Cache
-        run: |
-          # 获取缓存列表并删除
-          gh cache list --key ${{ env.WRT_ARCH }}-${{ hashFiles('**/repo_flag') }}- --json key --jq '.[] | .key' | while read -r key; do
-            gh cache delete "$key"
-          done
-          # 输出缓存状态
-          echo "========cache status========"
-          echo "ccache: $(du -sh ./wrt/.ccache | cut -f 1)"
-          echo "staging: $(du -sh ./wrt/staging_dir | cut -f 1)"
-
-      - name: Machine Information
-        run: |
-          cd ./wrt/
-
-          echo "======================="
-          lscpu | grep -E "name|Core|Thread"
-          echo "======================="
-          df -h
-          echo "======================="
-          du -h --max-depth=1
-          echo "======================="
-
-      - name: Package Firmware
-        run: |
-          cd ./wrt/ && mkdir ./upload/
-
-          cp -f ./.config ./upload/Config-"$WRT_CONFIG"-"$WRT_INFO"-"$WRT_BRANCH"-"$WRT_DATE".txt
-
-          if [[ $WRT_TEST != 'true' ]]; then
-            echo "WRT_KVER=$(find ./bin/targets/ -type f -name "*.manifest" -exec grep -oP '^kernel - \K[\d\.]+' {} \;)" >> $GITHUB_ENV
-            echo "WRT_LIST=$(find ./bin/targets/ -type f -name "*.manifest" -exec grep -oP '^luci-(app|theme)[^ ]*' {} \; | tr '\n' ' ')" >> $GITHUB_ENV
-
-            find ./bin/targets/ -iregex ".*\(buildinfo\|json\|sha256sums\|packages\)$" -exec rm -rf {} +
-
-            for FILE in $(find ./bin/targets/ -type f -iname "*$WRT_TARGET*") ; do
-              EXT=$(basename $FILE | cut -d '.' -f 2-)
-              NAME=$(basename $FILE | cut -d '.' -f 1 | grep -io "\($WRT_TARGET\).*")
-              NEW_FILE="$NAME"-"$WRT_DATE"."$EXT"
-              mv -f $FILE ./upload/$NEW_FILE
-            done
-
-            find ./bin/targets/ -type f -exec mv -f {} ./upload/ \;
-
-            make clean -j$(nproc)
-          fi
-
-      - name: Upload Firmware Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{env.CI_NAME}}-${{env.WRT_CONFIG}}_${{env.WRT_DATE}}
-          path: ./wrt/upload/
-          retention-days: 3
-          compression-level: 0
-
-```
+            内核版本：${{env.WRT_KVER}}
+            插件列表：${{env.WRT_LIST}}
