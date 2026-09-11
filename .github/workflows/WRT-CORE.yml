@@ -209,7 +209,6 @@ jobs:
 
         run: |
           SCRIPT="openwrt/files/etc/uci-defaults/99-setup"
-
           if [ -f "$SCRIPT" ]; then
             sed -i "s|__PPPOE_USER__|$PPPOE_USER|g" "$SCRIPT"
             sed -i "s|__PPPOE_PASS__|$PPPOE_PASS|g" "$SCRIPT"
