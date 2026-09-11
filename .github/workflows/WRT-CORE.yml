@@ -216,33 +216,6 @@ jobs:
           else
             echo "WARNING: 99-setup script not found"
           fi
-
-      - name: Add non-sensitive test value
-        run: |
-          echo "TEST_VALUE='__TEST_VALUE__'" >> wrt/files/etc/uci-defaults/99-setup
-
-      - name: Verify replacement (non-sensitive)
-        env:
-          TEST_VALUE: "HelloWorld123"
-        run: |
-          SCRIPT="wrt/files/etc/uci-defaults/99-setup"
-          sed -i "s|__TEST_VALUE__|$TEST_VALUE|g" "$SCRIPT"
-
-          echo "===== VERIFY OUTPUT ====="
-          grep TEST_VALUE "$SCRIPT" || echo "TEST_VALUE not found"
-          echo "===== END VERIFY ====="
-          #添加测试退出
-
-      - name: Secret Length
-        env:
-          PPPOE_USER: ${{ secrets.PPPOE_USER }}
-          ROOT_PASS: ${{ secrets.ROOT_PASS }}
-        run: |
-          echo "PPPOE_USER LEN=${#PPPOE_USER}"
-          echo "ROOT_PASS LEN=${#ROOT_PASS}"
-          exit 1
-      - name: Stop Here
-        run: exit 1
         
       - name: Custom Settings
         run: |
