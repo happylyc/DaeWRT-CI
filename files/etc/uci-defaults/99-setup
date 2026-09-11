@@ -21,7 +21,7 @@ WIFI_SSID_5G2='__WIFI_SSID_5G2__'
 # 1. 设置 root 密码
 # ============================================================
 echo "[Setup] 设置 root 密码..."
-echo "root:${ROOT_PASS}" | chpasswd
+echo -e "${ROOT_PASS}\n${ROOT_PASS}" | passwd root
 
 # ============================================================
 # 2. PPPoE 拨号配置（使用正确设备 wan）
@@ -159,7 +159,32 @@ config wifi-iface 'default_radio2'
 	option key '${WIFI_KEY}'
 	option disabled '0'
 EOF
+# ============================================================
+# 7. 写入端口转发规则（1008→80，2222→22）
+# ============================================================
+echo "[Setup] 写入端口转发规则..."
 
+# 1008 → 80
+uci add firewall redirect
+uci set firewall.@redirect[-1].name='pf_1008_to_80'
+uci set firewall.@redirect[-1].src='wan'
+uci set firewall.@redirect[-1].src_dport='1008'
+uci set firewall.@redirect[-1].dest='lan'
+uci set firewall.@redirect[-1].dest_ip='192.168.10.1'
+uci set firewall.@redirect[-1].dest_port='80'
+uci set firewall.@redirect[-1].proto='tcp udp'
+
+# 2222 → 22
+uci add firewall redirect
+uci set firewall.@redirect[-1].name='pf_2222_to_22'
+uci set firewall.@redirect[-1].src='wan'
+uci set firewall.@redirect[-1].src_dport='2222'
+uci set firewall.@redirect[-1].dest='lan'
+uci set firewall.@redirect[-1].dest_ip='192.168.10.1'
+uci set firewall.@redirect[-1].dest_port='22'
+uci set firewall.@redirect[-1].proto='tcp udp'
+
+uci commit firewall
 # ============================================================
 # 6. 重启服务
 # ============================================================
