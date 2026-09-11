@@ -216,7 +216,48 @@ jobs:
           else
             echo "WARNING: 99-setup script not found"
           fi
-        
+      - name: Verify Secrets Injection
+        run: |
+          SCRIPT="wrt/files/etc/uci-defaults/99-setup"
+
+          echo "===== Check 99-setup ====="
+
+          if [ ! -f "$SCRIPT" ]; then
+            echo "ERROR: $SCRIPT not found"
+            exit 1
+          fi
+
+          echo "File exists: OK"
+
+          echo ""
+          echo "===== Placeholder Check ====="
+
+          if grep -q "__PPPOE_USER__\|__PPPOE_PASS__\|__ROOT_PASS__\|__WIFI_KEY__" "$SCRIPT"; then
+            echo "ERROR: Placeholder still exists!"
+            grep "__" "$SCRIPT"
+            exit 1
+          else
+            echo "OK: No placeholder found"
+          fi
+
+          echo ""
+          echo "===== Variable Check ====="
+
+          grep -E "PPPOE_USER|PPPOE_PASS|ROOT_PASS|WIFI_KEY" "$SCRIPT"
+
+          echo ""
+          echo "===== Length Check ====="
+
+          PPPOE_USER=$(grep "PPPOE_USER=" "$SCRIPT" | cut -d "'" -f2)
+          ROOT_PASS=$(grep "ROOT_PASS=" "$SCRIPT" | cut -d "'" -f2)
+          WIFI_KEY=$(grep "WIFI_KEY=" "$SCRIPT" | cut -d "'" -f2)
+
+          echo "PPPOE_USER length: ${#PPPOE_USER}"
+          echo "ROOT_PASS length: ${#ROOT_PASS}"
+          echo "WIFI_KEY length: ${#WIFI_KEY}"
+
+          echo ""
+          echo "===== Verify Done ====="     
       - name: Custom Settings
         run: |
           . "$GITHUB_WORKSPACE/Scripts/function.sh"
