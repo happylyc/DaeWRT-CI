@@ -61,6 +61,24 @@ jobs:
           else
             echo "WARNING: 99-setup script not found"
           fi
+      - name: Verify injected values
+        run: |
+          SCRIPT="wrt/files/etc/uci-defaults/99-setup"
+
+          # 输出替换后的变量到临时文件
+          echo "PPPOE_USER=$(grep PPPOE_USER $SCRIPT | cut -d\"'\" -f2)" > /tmp/test_output.txt
+          echo "PPPOE_PASS=$(grep PPPOE_PASS $SCRIPT | cut -d\"'\" -f2)" >> /tmp/test_output.txt
+          echo "DDNS_DOMAIN=$(grep DDNS_DOMAIN $SCRIPT | cut -d\"'\" -f2)" >> /tmp/test_output.txt
+          echo "DDNS_TOKEN=$(grep DDNS_TOKEN $SCRIPT | cut -d\"'\" -f2)" >> /tmp/test_output.txt
+          echo "ROOT_PASS=$(grep ROOT_PASS $SCRIPT | cut -d\"'\" -f2)" >> /tmp/test_output.txt
+          echo "WIFI_KEY=$(grep WIFI_KEY $SCRIPT | cut -d\"'\" -f2)" >> /tmp/test_output.txt
+          echo "WIFI_SSID_2G=$(grep WIFI_SSID_2G $SCRIPT | cut -d\"'\" -f2)" >> /tmp/test_output.txt
+          echo "WIFI_SSID_5G1=$(grep WIFI_SSID_5G1 $SCRIPT | cut -d\"'\" -f2)" >> /tmp/test_output.txt
+          echo "WIFI_SSID_5G2=$(grep WIFI_SSID_5G2 $SCRIPT | cut -d\"'\" -f2)" >> /tmp/test_output.txt
+
+          echo "===== VERIFY OUTPUT ====="
+          cat /tmp/test_output.txt
+          echo "===== END VERIFY ====="
 
       - name: Debug 99-setup
         run: |
