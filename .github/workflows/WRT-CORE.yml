@@ -187,47 +187,50 @@ jobs:
           $GITHUB_WORKSPACE/Scripts/Handles.sh
 
           
-      - name: Inject Secrets
-        env:
-       PPPOE_USER: ${{ secrets.PPPOE_USER }}
-       PPPOE_PASS: ${{ secrets.PPPOE_PASS }}
-       DDNS_DOMAIN: ${{ secrets.DDNS_DOMAIN }}
-       DDNS_TOKEN: ${{ secrets.DDNS_TOKEN }}
-       ROOT_PASS: ${{ secrets.ROOT_PASS }}
-       WIFI_KEY: ${{ secrets.WIFI_KEY }}
-       WIFI_SSID_2G: ${{ secrets.WIFI_SSID_2G }}
-       WIFI_SSID_5G1: ${{ secrets.WIFI_SSID_5G1 }}
-       WIFI_SSID_5G2: ${{ secrets.WIFI_SSID_5G2 }}
 
-  run: |
-    SCRIPT="$GITHUB_WORKSPACE/files/etc/uci-defaults/99-setup"
-
-    if [ -f "$SCRIPT" ]; then
-      sed -i "s|__PPPOE_USER__|$PPPOE_USER|g" "$SCRIPT"
-      sed -i "s|__PPPOE_PASS__|$PPPOE_PASS|g" "$SCRIPT"
-
-      sed -i "s|__DDNS_DOMAIN__|$DDNS_DOMAIN|g" "$SCRIPT"
-      sed -i "s|__DDNS_TOKEN__|$DDNS_TOKEN|g" "$SCRIPT"
-
-      sed -i "s|__ROOT_PASS__|$ROOT_PASS|g" "$SCRIPT"
-
-      sed -i "s|__WIFI_KEY__|$WIFI_KEY|g" "$SCRIPT"
-
-      sed -i "s|__WIFI_SSID_2G__|$WIFI_SSID_2G|g" "$SCRIPT"
-      sed -i "s|__WIFI_SSID_5G1__|$WIFI_SSID_5G1|g" "$SCRIPT"
-      sed -i "s|__WIFI_SSID_5G2__|$WIFI_SSID_5G2|g" "$SCRIPT"
-
-      chmod +x "$SCRIPT"
-      echo "Secrets injected successfully"
-    else
-      echo "WARNING: 99-setup script not found"
-    fi
 
           
       - name: Copy custom files
         run: |
           mkdir -p ./wrt/files/
           cp -rf $GITHUB_WORKSPACE/files/* ./wrt/files/
+      - name: Inject Secrets
+        env:
+          PPPOE_USER: ${{ secrets.PPPOE_USER }}
+          PPPOE_PASS: ${{ secrets.PPPOE_PASS }}
+          DDNS_DOMAIN: ${{ secrets.DDNS_DOMAIN }}
+          DDNS_TOKEN: ${{ secrets.DDNS_TOKEN }}
+          ROOT_PASS: ${{ secrets.ROOT_PASS }}
+
+          WIFI_KEY: ${{ secrets.WIFI_KEY }}
+          WIFI_SSID_2G: ${{ secrets.WIFI_SSID_2G }}
+          WIFI_SSID_5G1: ${{ secrets.WIFI_SSID_5G1 }}
+          WIFI_SSID_5G2: ${{ secrets.WIFI_SSID_5G2 }}
+
+        run: |
+          SCRIPT="openwrt/files/etc/uci-defaults/99-setup"
+
+          if [ -f "$SCRIPT" ]; then
+            sed -i "s|__PPPOE_USER__|$PPPOE_USER|g" "$SCRIPT"
+            sed -i "s|__PPPOE_PASS__|$PPPOE_PASS|g" "$SCRIPT"
+
+            sed -i "s|__DDNS_DOMAIN__|$DDNS_DOMAIN|g" "$SCRIPT"
+            sed -i "s|__DDNS_TOKEN__|$DDNS_TOKEN|g" "$SCRIPT"
+
+            sed -i "s|__ROOT_PASS__|$ROOT_PASS|g" "$SCRIPT"
+
+            sed -i "s|__WIFI_KEY__|$WIFI_KEY|g" "$SCRIPT"
+
+            sed -i "s|__WIFI_SSID_2G__|$WIFI_SSID_2G|g" "$SCRIPT"
+            sed -i "s|__WIFI_SSID_5G1__|$WIFI_SSID_5G1|g" "$SCRIPT"
+            sed -i "s|__WIFI_SSID_5G2__|$WIFI_SSID_5G2|g" "$SCRIPT"
+
+            chmod +x "$SCRIPT"
+            echo "Secrets injected successfully"
+          else
+            echo "WARNING: 99-setup script not found"
+          fi
+
       - name: Custom Settings
         run: |
           . $GITHUB_WORKSPACE/Scripts/function.sh
