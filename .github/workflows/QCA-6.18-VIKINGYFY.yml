@@ -1,5 +1,4 @@
 name: WRT-CORE
-
 on:
   workflow_call:
     inputs:
